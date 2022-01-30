@@ -1,7 +1,10 @@
-import { checkForName } from './js/nameChecker'
+/*import { getData } from './js/nameChecker'
+import { postData } from './js/sendData'*/
+import {refreshUI} from './js/refreshUI'
 import { handleSubmit } from './js/formHandler'
 
-console.log(checkForName);
 
-alert("I EXIST")
-console.log("CHANGE!!");
+export {
+    refreshUI,
+    handleSubmit
+}

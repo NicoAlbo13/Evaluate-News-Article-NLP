@@ -1,8 +1,9 @@
 var path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
-const cors = requiere('cors')
-const mockAPIResponse = require('./mockAPI.js')
+const cors = require('cors')
+const dotenv = require('dotenv')
+dotenv.config()
 
 const app = express()
 
@@ -11,19 +12,32 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
-console.log(__dirname)
-
 // designates what port the app will listen to for incoming requests
 const port = 8080
 app.listen(port, ()=>{
     console.log(`Server running on localhost: ${port}`)
 })
 
-app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
+const apiKey = process.env.API_KEY
+
+app.get('/key', function (req, res){
+    res.send(apiKey)
 })
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-})
+let projectData = {}
+
+app.post('/add', message)
+
+function message(req, res){
+    postData={
+        response: req.body.response
+    }
+    Object.assign(projectData, postData)
+    res.send(projectData)
+}
+
+app.get('/all', sendData);
+
+function sendData(req, res){
+    res.send(projectData);
+}

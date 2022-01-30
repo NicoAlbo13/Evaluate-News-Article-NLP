@@ -18,7 +18,8 @@
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.5",
+    "workbox-webpack-plugin": "^6.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
