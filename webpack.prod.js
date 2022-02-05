@@ -11,6 +11,9 @@ module.exports = {
         library: 'Client'
     },
     mode: 'production',
+    optimization: {
+        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    },
     module: {
         rules: [
             {

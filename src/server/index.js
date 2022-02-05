@@ -13,27 +13,33 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
 // designates what port the app will listen to for incoming requests
-const port = 8080
+const port = 8081
 app.listen(port, ()=>{
     console.log(`Server running on localhost: ${port}`)
 })
 
-const apiKey = process.env.API_KEY
+const apiKey = {
+    key: `${process.env.API_KEY}`
+}
+
+projectData = {};
 
 app.get('/key', function (req, res){
     res.send(apiKey)
 })
 
-let projectData = {}
-
 app.post('/add', message)
 
 function message(req, res){
-    postData={
-        response: req.body.response
+    postData = {
+        agreement: req.body.agreement,
+        irony: req.body.irony,
+        subjectivity: req.body.subjectivity,
+        confidence: req.body.confidence
     }
-    Object.assign(projectData, postData)
-    res.send(projectData)
+    Object.assign(projectData, postData);
+    console.log(projectData)
+    res.send(projectData);
 }
 
 app.get('/all', sendData);

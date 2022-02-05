@@ -1,10 +1,13 @@
-/*import { getData } from './js/nameChecker'
-import { postData } from './js/sendData'*/
-import {refreshUI} from './js/refreshUI'
+import { getResponse } from './js/getResponse'
 import { handleSubmit } from './js/formHandler'
 
+import './styles/resets.scss'
+import './styles/base.scss'
+import './styles/footer.scss'
+import './styles/form.scss'
+import './styles/header.scss'
 
 export {
-    refreshUI,
+    getResponse,
     handleSubmit
 }
