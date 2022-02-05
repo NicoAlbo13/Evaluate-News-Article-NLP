@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+$text: 'Poppins', sans-serif;
+$title: 'Open Sans', sans-serif;
+$logo: 'Monoton', sans-serif;
+$Ccolor: #2d572c;
+$white: #dcdcdc;
+$shadow: #444;
+$hover: #02b3e4;
+
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font: $text;
+  background-color: #d5b59c;
 }
 
 main {
-    flex: 2;
+  flex: 2;
 }
 
 section {
-    max-width: 800px;
-    margin: 50px auto;
+  max-width: 800px;
+  margin-bottom: 0px;
+}
+
+.title {
+  font: $title;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-family: $text;
 }

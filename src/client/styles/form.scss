@@ -1,12 +1,90 @@
-form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
+@import './base.scss';
+
+main {
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin: auto;
+  margin-bottom: 100px;
+  display: grid;
+  font-family: $text;
+  grid-template-areas:
+    'form'
+    'results';
+  grid-gap: 30px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: fit-content;
+  border-radius: 20px;
+  padding-top: 0px;
+  box-shadow: 0 0 15px $shadow;
+}
+
+.form-container {
+  grid-area: 'form';
+}
+
+.main {
+  width: 650px;
+  background-color: $Ccolor;
+  font-family: $title;
+  font-size: 1.6em;
+  text-align: center;
+  align-items: center;
+  color: $white;
+  padding: 20px;
+  margin-top: 0px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
+  padding: 5px 20px;
+  width: 450px;
+  line-height: 16px;
+  margin: 10px 0;
+}
+
+#text {
+  width: 600px;
+  height: 300px;
+  display: block;
+  margin: 20px;
+  font-family: $text;
+  font-size: 1.1em;
+  background-color: #ecdbcd;
+}
+
+label {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.button {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 180px;
+  height: 60px;
+  background: $Ccolor;
+  color: $white;
+  font-size: 26px;
+  font-family: $text;
+  border: 1px solid #181818;
+  box-shadow: 2px 4px 5px $shadow;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#results {
+  background: rgba(10, 10, 10, 0.2);
+  text-align: center;
+  grid-area: 'results';
+  border-radius: 0px 0px 20px 20px;
+  font-family: $text;
+  font-size: 20px;
+  padding: 3px;
 }

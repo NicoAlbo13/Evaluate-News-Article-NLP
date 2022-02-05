@@ -1,5 +1,30 @@
+@import './base.scss';
+
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #191919;
+  padding: 25px;
+  margin-bottom: 80px;
+}
+
+.logo {
+  color: $white;
+  font-family: $logo;
+  font-size: 2.5em;
+}
+
+ul {
+  font-size: 1.3em;
+  font-family: $text;
+  li {
+    display: inline-block;
+    margin: 10px;
+  }
+  a {
+    color: $white;
+    &:hover {
+      color: $hover;
+    }
+  }
 }

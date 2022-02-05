@@ -12,32 +12,59 @@
 
   <body>
     <header>
-      <div class="">Logo</div>
-      <div class="">navigation</div>
+      <div class="logo">NLP</div>
+      <div class="nav">
+        <ul>
+          <a href="#"><li>About</li></a>
+          <a
+            href="https://en.wikipedia.org/wiki/Natural_language_processing"
+            target="_blank"
+          >
+            <li>What is NLP?</li>
+          </a>
+        </ul>
+      </div>
     </header>
 
     <main>
-      <section>
-        <form class="">
-          <textarea id="text" type="textarea" name="input" value="" onblur="onBlur()" rows="6" placeholder="Enter the text you want to analyse" required></textarea>
-          <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-            Submit
-          </button>
-        </form>
-      </section>
+      <div class="content">
+        <section class="form-container">
+          <div class="main title">
+            <h2 class="title">Evaluate News Article with NLP</h2>
+          </div>
+          <form class="">
+            <label class="text">Enter your Article:</label>
+            <textarea
+              id="text"
+              type="textarea"
+              name="input"
+              value=""
+              onblur="onBlur()"
+              rows="6"
+              placeholder="Enter the text you want to be analyse"
+              required
+            ></textarea>
+            <input
+              type="submit"
+              name=""
+              value="Analyse"
+              class="button"
+              onclick="return Client.handleSubmit(event)"
+              onsubmit="return Client.handleSubmit(event)"
+            />
+          </form>
+        </section>
 
-      <section>
-        <strong>Form Results:</strong>
-        <div id="agreement"></div>
-        <div id="irony"></div>
-        <div id="subjectivity"></div>
-        <div id="confidence"></div>
-      </section>
+        <section id="results">
+          <strong class="title">Form Results:</strong>
+          <div id="agreement"></div>
+          <div id="irony"></div>
+          <div id="subjectivity"></div>
+          <div id="confidence"></div>
+        </section>
+      </div>
     </main>
 
-    <footer>
-      <p>This is a footer</p>
-    </footer>
     <script>
       // Check that service workers are supported
       if ('serviceWorker' in navigator) {
@@ -46,6 +73,6 @@
           navigator.serviceWorker.register('/service-worker.js');
         });
       }
-  </script>
+    </script>
   </body>
 </html>
