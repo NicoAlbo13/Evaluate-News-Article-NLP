@@ -12,10 +12,10 @@ const refreshUI = async () => {
     const request = await fetch('http://localhost:8081/all');
     try{
         const allData = await request.json();
-        document.getElementById('agreement').innerHTML = allData.agreement;
-        document.getElementById('irony').innerHTML = allData.irony;
-        document.getElementById('subjectivity').innerHTML = allData.subjectivity;
-        document.getElementById('confidence').innerHTML = allData.confidence;
+        document.getElementById('agreement').innerHTML = `Agreement: ${allData.agreement}`;
+        document.getElementById('irony').innerHTML = `Irony: ${allData.irony}`;
+        document.getElementById('subjectivity').innerHTML = `Subjectivity: ${allData.subjectivity}`;
+        document.getElementById('confidence').innerHTML = `Confidence: ${allData.confidence}%`;
     }catch(error){
         console.log(error);
     }
