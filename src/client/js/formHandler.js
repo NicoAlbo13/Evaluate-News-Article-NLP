@@ -2,9 +2,18 @@ async function handleSubmit(event) {
     event.preventDefault()
     // check what text was put into the form field
     let text = document.getElementById('text').value
-    
+    let error = document.getElementById('error')
+    let results = document.getElementById('apiresults')
+
     await Client.getResponse(text)
-    refreshUI()
+    if (text === '') {
+        error.classList.remove('hide');
+        results.classList.add('hide');
+    }else{
+        error.classList.add('hide');
+        results.classList.remove('hide');
+        refreshUI()
+    }
 }
 
 
