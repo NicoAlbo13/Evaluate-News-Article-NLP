@@ -1,3 +1,5 @@
+import "babel-polyfill"
+
 const getResponse = async(text) => {
 
   const apikey = await getData('http://localhost:8081/key')
