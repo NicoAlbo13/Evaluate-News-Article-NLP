@@ -14,7 +14,7 @@ async function handleSubmit(event) {
     }else{
         error.classList.add('hide');
         results.classList.remove('hide');
-        refreshUI()
+        setTimeout(refreshUI, 400);
     }
 }
 
